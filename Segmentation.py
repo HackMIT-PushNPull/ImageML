@@ -1,8 +1,16 @@
-import keras.models
+
 import matplotlib.pyplot as plt
 
 import cv2
 import numpy as np
+
+
+def to_one_hot(images, dimension=10):
+    results = np.zeros((len(images), dimension))
+    for i, label in enumerate(images):
+        results[i, label] = 1
+    return results
+
 
 def segmentation(image_file_location):
     image_file_location = 'Images/test_img4.png'
@@ -36,3 +44,4 @@ def segmentation(image_file_location):
     return preprocessed_digits
 
 segmentation('')
+
