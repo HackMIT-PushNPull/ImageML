@@ -64,8 +64,6 @@ def pad_by_size(character):
             height = 45
 
     # Pad remaining area
-    print(width)
-    print(height)
     width_pad = 45 - width
     r_width_pad = width_pad
     height_pad = 45 - height
@@ -91,6 +89,5 @@ def pad_by_size(character):
                            "constant", constant_values=0)
     return new_character
 
-segmentation('Images/test_img6.png')
 
 
